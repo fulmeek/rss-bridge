@@ -108,7 +108,7 @@ class YouTubeAPIBridge extends BridgeAbstract {
 	}
 
 	private function getApiConfig() {
-		$this->apiKey = Configuration::getConfig(get_called_class(), 'api_key');
+		$this->apiKey = $this->getConfig('api_key');
 	}
 
 	private function collectVideos($playlist) {
