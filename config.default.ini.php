@@ -76,3 +76,9 @@ port = 11211
 ; To obtain a YouTube Data API key, visit
 ; https://console.developers.google.com
 api_key = ""
+
+[TwitterAPIBridge]
+; To obtain Twitter API credentials, create an application on
+; https://apps.twitter.com
+api_key = ""
+api_secret = ""
