@@ -47,8 +47,8 @@ class TwitterAPIBridge extends BridgeAbstract {
 
 		$apiParams = array('1.1/statuses/user_timeline.json?count=150', 'tweet_mode=extended');
 		$apiParams[] = 'screen_name=' . $user;
-		$apiParams[] = 'exclude_replies=' . (!empty($this->getInput('replies'))) ? 'false' : 'true';
-		$apiParams[] = '&include_rts=' . (!empty($this->getInput('retweets'))) ? 'true' : 'false';
+		$apiParams[] = 'exclude_replies=' . ((!empty($this->getInput('replies'))) ? 'false' : 'true');
+		$apiParams[] = 'include_rts=' . ((!empty($this->getInput('retweets'))) ? 'true' : 'false');
 
 		$data = json_decode(getContents(self::API_ENDPOINT . implode('&', $apiParams),
 			array('Authorization: Bearer ' . $this->apiToken)
