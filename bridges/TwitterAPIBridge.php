@@ -159,7 +159,7 @@ class TwitterAPIBridge extends BridgeAbstract {
 
 	public function getName(){
 		if (!empty($this->title)) {
-			return $this->title . ' - ' . self::NAME;
+			return $this->title . ' - Twitter';
 		}
 		return self::NAME;
 	}
