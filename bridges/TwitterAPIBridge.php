@@ -190,7 +190,7 @@ class TwitterAPIBridge extends BridgeAbstract {
 		$cacheFactory->setWorkingDir(PATH_LIB_CACHES);
 		$cache = $cacheFactory->create(Configuration::getConfig('cache', 'type'));
 		$cache->setScope(get_called_class());
-		$cache->setKey(['token']);
+		$cache->setKey(array('token'));
 		$this->apiToken = $cache->loadData();
 
 		if (empty($this->token)) {
